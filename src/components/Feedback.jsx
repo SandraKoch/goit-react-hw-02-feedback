@@ -23,7 +23,7 @@ class FeedbackComponent extends Component {
   countPositiveFeedback = () => {
     const allAnswers = this.state.good + this.state.neutral + this.state.bad;
     return allAnswers
-      ? `${((this.state.good / allAnswers) * 100).toFixed(0)}%`
+      ? `${((this.state.good / allAnswers) * 100).toFixed(2)}%`
       : `0%`;
   };
 
