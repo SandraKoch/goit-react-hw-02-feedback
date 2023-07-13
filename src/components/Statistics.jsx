@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 
-class Statistics extends Component {
+export class Statistics extends Component {
   render() {
-    // const { text, count } = this.props;
+    const { good, neutral, bad, total, positivePercentage } = this.props;
 
     return (
-      <div>
-        <h1>{text}</h1>
-        <h2>Count: {count}</h2>
-      </div>
+      <>
+        <ul>
+          <li>Good : {good}</li>
+          <li>Neutral: {neutral}</li>
+          <li>Bad: {bad}</li>
+          <li>A total of {total} customers' feedbacks were left</li>
+          <li>Positive feedback: {positivePercentage}</li>
+        </ul>
+      </>
     );
   }
 }
-
-export default Statistics;
