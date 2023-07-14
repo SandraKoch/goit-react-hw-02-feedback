@@ -11,7 +11,6 @@ export const App = () => {
         color: 'white',
         backgroundColor: 'black',
         backgroundSize: 'cover',
-        listStyle: 'none',
         backgroundImage: `linear-gradient(
           to bottom,
           rgba(47, 48, 58, 0.4) 0%,
