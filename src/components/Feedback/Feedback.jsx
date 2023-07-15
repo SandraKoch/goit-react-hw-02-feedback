@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Statistics } from './Statistics';
-import { FeedbackOptions } from './FeedbackOptions';
-import { Section } from './Section';
-// import PropTypes from 'prop-types';
+import { Statistics } from '../Statistics/Statistics';
+import { FeedbackOptions } from '../FeedbackOptions/FeedbackOptions';
+import { Section } from '../Section/Section';
+import css from './Feedback.module.css';
+import PropTypes from 'prop-types';
 
 class FeedbackComponent extends Component {
   state = {
@@ -33,7 +34,9 @@ class FeedbackComponent extends Component {
   render() {
     return (
       <div>
-        <h1>Did you enjoy your coffee at Expresso?</h1>
+        <h1 className={css.pageHeader}>
+          Did you enjoy your coffee at Expresso?
+        </h1>
 
         <Section title="Please leave your feedback">
           <FeedbackOptions
@@ -55,5 +58,11 @@ class FeedbackComponent extends Component {
     );
   }
 }
+
+FeedbackComponent.propTypes = {
+  countTotalFeedback: PropTypes.func,
+  addStats: PropTypes.func,
+  countPositiveFeedback: PropTypes.func,
+};
 
 export default FeedbackComponent;
